@@ -9,5 +9,77 @@ html {
 
 body {
   margin: 0;
-  font: $base-text-size / 1 $base-font-family;
+  font-family: Gotham;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    text-align: center;
+    width: 100%;
+    background-color: rgb(192,132,140);
+    border-bottom: 1px solid transparentize(#333, 0.5);
+  }
+
+  .sidebar-body-container {
+    display: flex;
+    width: 100%;
+
+  }
+
+  .sidebar {
+    background-color: rgb(108,129,186);
+    width: 250px;
+    border-right: 1px solid transparentize(#333, 0.5);
+
+
+    .form {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid transparentize(#333, 0.5);
+      border-top: 1px solid transparentize(#333, 0.5);
+    }
+
+    .ul-box {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid transparentize(#333, 0.5);
+    }
+
+    ul {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      display: flex;
+
+
+      li {
+        list-style: none;
+        margin: 2px;
+
+      }
+    }
+
+    .addEntry {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid transparentize(#333, 0.5);
+    }
+  }
+
+  .body {
+    border-top: 1px solid transparentize(#333, 0.5);
+    background-color: rgb(254,225,211);
+    width: 100%;
+    border-bottom: 1px solid transparentize(#333, 0.5);
+  }
 }
