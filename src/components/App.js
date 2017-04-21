@@ -1,5 +1,14 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import Home from './Home'
+import Result from './Result'
+import Browse from './Browse'
+import Letters from './Letters'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom'
 
 class App extends Component {
   render () {
@@ -18,22 +27,19 @@ class App extends Component {
               </form>
             </div>
 
-            <div className='ul-box'>
-              <ul>
-                <li><a href='/browse/a'>A</a></li>
-                <li><a href='/browse/b'>B</a></li>
-                <li><a href='/browse/c'>C</a></li>
-                <li><a href='/browse/d'>D</a></li>
-                <li> ... </li>
-              </ul>
-            </div>
+            <Letters />
+
             <div className='addEntry'>
               <button>Add an Entry</button>
             </div>
           </div>
 
           <div className='body'>
-            <h2>Welcome to Jabberdexicon!</h2>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/browse/:letter' component={Browse} />
+              <Route path='/entry/:slug' component={Result} />
+            </Switch>
           </div>
         </div>
 
