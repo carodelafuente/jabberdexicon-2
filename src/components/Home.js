@@ -5,6 +5,12 @@ class Home extends Component {
     return <div>
       <h2>Welcome to Jabberdexicon!</h2>
       <p> The ultimate tech jargon glossary. </p>
+      <h4>Random entries:</h4>
+      <ul>
+        <li> Word </li>
+        <li> Word </li>
+        <li> Word </li>
+      </ul>
     </div>
   }
 }

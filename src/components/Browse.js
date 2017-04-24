@@ -12,7 +12,7 @@ class Browse extends Component {
   }
 
   loadWords () {
-    const url = 'https://jabberdexicon.herokuapp.com/entries?access_token=example'
+    const url = 'https://jabberdexicon.herokuapp.com/entries?access_token=vorpal'
     window.fetch(url)
   .then(r => r.json())
   .then(data => {
@@ -43,7 +43,7 @@ class Browse extends Component {
     // })
     return (
       <div className='Browse'>
-        <h2> Results </h2>
+        <h2> {this.props.match.params.letter.toUpperCase()}</h2>
         <ul> {words} </ul>
       </div>
     )
