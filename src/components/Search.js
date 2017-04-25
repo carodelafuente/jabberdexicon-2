@@ -28,8 +28,9 @@ class Search extends Component {
 
   render () {
     return <div> <form onSubmit={this._submit}>
-        Search:
-        <input type='search' ref='query' />
+      <div className='searchForm'>
+        <span className='icon'><i className='fa fa-search' /></span>
+        <input type='search' id='search' placeholder='Search...' ref='query' /> </div>
     </form>
       <div className='searchResult'>
         <Route path='/search/' render={this.showSearchText} />

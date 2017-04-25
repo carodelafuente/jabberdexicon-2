@@ -26,7 +26,7 @@ class Result extends Component {
   }
 
   render () {
-    return <div className='Result'>
+    return <div className='Result body'>
       <h2> {this.state.term} </h2>
       <p> {this.state.definition} </p>
     </div>

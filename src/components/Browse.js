@@ -42,7 +42,7 @@ class Browse extends Component {
     //   </p>
     // })
     return (
-      <div className='Browse'>
+      <div className='Browse body'>
         <h2> {this.props.match.params.letter.toUpperCase()}</h2>
         <ul> {words} </ul>
       </div>

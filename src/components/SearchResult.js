@@ -27,7 +27,7 @@ class SearchResult extends Component {
         <NavLink to={`/entry/${word.slug}`}>{word.term}</NavLink>
       </li>
     })
-    return <div className='SearchResult'>
+    return <div className='SearchResult body'>
       <h2> Results for "{this.props.match.params.word}" </h2>
       <ul>
         {words}
